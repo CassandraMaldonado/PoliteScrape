@@ -1,6 +1,6 @@
  # PoliteScrape
 
- Polite async web scraping framework and CLI. Focused on robots.txt awareness, per-domain throttling, retries/backoff, and resumable checkpoints.
+ Polite async web scraping framework and CLI, focused on robots.txt awareness, per-domain throttling, retries/backoff and resumable checkpoints.
 
  ## Features
  - Robots.txt fetch + cache; respects Disallow and crawl-delay (defaults to allow with low rate when robots is missing).
