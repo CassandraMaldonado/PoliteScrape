@@ -3,7 +3,7 @@
  Polite async web scraping framework and CLI, focused on robots.txt awareness, per-domain throttling, retries/backoff and resumable checkpoints.
 
  ## Features
- - Robots.txt fetch + cache; respects Disallow and crawl-delay (defaults to allow with low rate when robots is missing).
+ - Robots.txt fetch + cache; respects Disallow and crawl-delay.
  - Per-domain and global concurrency/RPS with jittered sleeps.
  - Async httpx fetcher with timeouts, retry + exponential backoff (tenacity), optional disk cache.
  - CSS selector extraction validated via generated Pydantic model.
