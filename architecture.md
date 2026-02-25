@@ -1,6 +1,6 @@
  # PoliteScrape Architecture
 
- ```mermaid
+
  flowchart TD
    CLI[Typer CLI] --> Config[RunConfig (pydantic)]
    Config --> Crawler
@@ -11,7 +11,7 @@
    Crawler --> Extractor[CSSExtractor + Pydantic]
    Crawler --> Jsonl[JSONL sink]
    Crawler --> Meta[SQLite checkpoints]
- ```
+
 
  ## Components
  - **CLI**: Loads YAML config, initializes crawler.
