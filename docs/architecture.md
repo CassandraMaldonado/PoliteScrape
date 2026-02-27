@@ -1,6 +1,7 @@
  # PoliteScrape Architecture
 
 
+```mermaid
 flowchart TD
 
     subgraph Interface
@@ -33,6 +34,7 @@ flowchart TD
     end
 
     Config --> Crawler
+```
 
 
  ## Components
