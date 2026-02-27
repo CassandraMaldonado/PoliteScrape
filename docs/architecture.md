@@ -1,16 +1,38 @@
  # PoliteScrape Architecture
 
 
- flowchart TD
-   CLI[Typer CLI] --> Config[RunConfig (pydantic)]
-   Config --> Crawler
-   Crawler --> Robots[RobotsCache]
-   Crawler --> RateLimiter
-   Crawler --> Fetcher[AsyncFetcher/httpx+tenacity]
-   Fetcher --> Cache[Disk cache]
-   Crawler --> Extractor[CSSExtractor + Pydantic]
-   Crawler --> Jsonl[JSONL sink]
-   Crawler --> Meta[SQLite checkpoints]
+flowchart TD
+
+    subgraph Interface
+        CLI[Typer CLI]
+        Config[RunConfig (Pydantic)]
+        CLI --> Config
+    end
+
+    subgraph Core Crawler
+        Crawler
+        Robots[RobotsCache]
+        RateLimiter
+        Fetcher[AsyncFetcher (httpx + tenacity)]
+        Extractor[CSSExtractor + Pydantic Models]
+
+        Crawler --> Robots
+        Crawler --> RateLimiter
+        Crawler --> Fetcher
+        Crawler --> Extractor
+    end
+
+    subgraph Storage
+        Cache[Disk Cache]
+        Jsonl[JSONL Sink]
+        Meta[SQLite Checkpoints]
+
+        Fetcher --> Cache
+        Crawler --> Jsonl
+        Crawler --> Meta
+    end
+
+    Config --> Crawler
 
 
  ## Components
