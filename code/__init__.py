@@ -1,4 +1,4 @@
- """PoliteScrape package initialization."""
+# Initialization.
 
  __all__ = ["__version__"]
 
