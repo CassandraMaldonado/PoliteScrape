@@ -1,0 +1,22 @@
+ input_urls:
+   - "http://127.0.0.1:8000/sample.html"
+ output_jsonl_path: "./output/example.jsonl"
+ user_agent: "politescrape-example"
+ global_concurrency: 2
+ per_domain_concurrency: 2
+ requests_per_second: 2.0
+ timeout_seconds: 5.0
+ retry_max_attempts: 2
+ cache_dir: "./.cache"
+ checkpoint_db_path: "./.politescrape/checkpoints.db"
+ extract:
+   schema:
+     title: "str"
+     price: "str"
+     link: "str"
+   selectors:
+     title: "h1.title"
+     price: "div.price"
+     link:
+       selector: "a.link"
+       attr: "href"
