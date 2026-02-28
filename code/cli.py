@@ -1,4 +1,3 @@
- """Typer CLI entrypoint."""
  from __future__ import annotations
 
  import asyncio
@@ -37,7 +36,6 @@
 
  @app.command()
  def run(config_path: Path, log_level: str = typer.Option("INFO", help="Log level (INFO/DEBUG)")) -> None:
-   """Run a crawl using a YAML config."""
    configure_logging(log_level)
    config = load_config(config_path)
    crawler = Crawler(config)
