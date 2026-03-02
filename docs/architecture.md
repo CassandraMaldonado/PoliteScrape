@@ -5,17 +5,17 @@
 flowchart TD
 
     subgraph Interface
-        CLI[Typer CLI]
-        Config[RunConfig (Pydantic)]
+        CLI["Typer CLI"]
+        Config["RunConfig (Pydantic)"]
         CLI --> Config
     end
 
-    subgraph Core Crawler
-        Crawler
-        Robots[RobotsCache]
-        RateLimiter
-        Fetcher[AsyncFetcher (httpx + tenacity)]
-        Extractor[CSSExtractor + Pydantic Models]
+    subgraph "Core Crawler"
+        Crawler["Crawler"]
+        Robots["RobotsCache"]
+        RateLimiter["RateLimiter"]
+        Fetcher["AsyncFetcher (httpx + tenacity)"]
+        Extractor["CSSExtractor + Pydantic Models"]
 
         Crawler --> Robots
         Crawler --> RateLimiter
@@ -24,9 +24,9 @@ flowchart TD
     end
 
     subgraph Storage
-        Cache[Disk Cache]
-        Jsonl[JSONL Sink]
-        Meta[SQLite Checkpoints]
+        Cache["Disk Cache"]
+        Jsonl["JSONL Sink"]
+        Meta["SQLite Checkpoints"]
 
         Fetcher --> Cache
         Crawler --> Jsonl
