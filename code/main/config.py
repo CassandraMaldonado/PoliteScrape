@@ -1,4 +1,4 @@
- """Pydantic configuration models for runs."""
+# Pydantic config.
  from __future__ import annotations
 
  from pathlib import Path
