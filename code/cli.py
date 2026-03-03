@@ -34,15 +34,4 @@
    print(sep)
 
 
- @app.command()
- def run(config_path: Path, log_level: str = typer.Option("INFO", help="Log level (INFO/DEBUG)")) -> None:
-   configure_logging(log_level)
-   config = load_config(config_path)
-   crawler = Crawler(config)
-   stats = asyncio.run(crawler.run())
-   render_summary(stats, config.output_jsonl_path)
-   logger.info("completed", output=config.output_jsonl_path)
 
-
- if __name__ == "__main__":
-   app()
