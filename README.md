@@ -90,9 +90,3 @@ flowchart TD
 
  asyncio.run(Crawler(config).run())
  ```
-
- ## Development
- - Lint: `ruff check .`
- - Format: `black .`
- - Type-check: `mypy politescrape`
- - Tests: `pytest`
