@@ -53,18 +53,18 @@
  Run: `politescrape run examples/config.yaml`.
 
  ## Architecture (Mermaid)
- ```mermaid
- flowchart TD
-   CLI[Typer CLI] --> Config[RunConfig (pydantic)]
-   Config --> Crawler
-   Crawler --> Robots[RobotsCache]
-   Crawler --> RateLimiter
-   Crawler --> Fetcher[AsyncFetcher/httpx+tenacity]
-   Fetcher --> Cache[Disk cache]
-   Crawler --> Extractor[CSSExtractor + Pydantic]
-   Crawler --> Jsonl[JSONL sink]
-   Crawler --> Meta[SQLite checkpoints]
- ```
+```mermaid
+flowchart TD
+  CLI["Typer CLI"] --> Config["RunConfig (pydantic)"]
+  Config --> Crawler["Crawler"]
+  Crawler --> Robots["RobotsCache"]
+  Crawler --> RateLimiter["RateLimiter"]
+  Crawler --> Fetcher["AsyncFetcher / httpx + tenacity"]
+  Fetcher --> Cache["Disk cache"]
+  Crawler --> Extractor["CSSExtractor + Pydantic"]
+  Crawler --> Jsonl["JSONL sink"]
+  Crawler --> Meta["SQLite checkpoints"]
+```
 
  ## Ethical scraping
  - Respect robots.txt: requests are checked and cached per domain; crawl-delay honored when provided.
