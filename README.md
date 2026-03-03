@@ -16,7 +16,6 @@
  python -m venv .venv && source .venv/bin/activate
  pip install -e ".[dev]"
 
- # Serve the example HTML locally
  cd examples && python -m http.server 8000
  # In another shell
  politescrape run examples/config.yaml
