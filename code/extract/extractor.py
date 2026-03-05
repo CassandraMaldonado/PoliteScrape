@@ -44,7 +44,6 @@
 
 
  class CSSExtractor:
-   """Extract fields from HTML using CSS selectors validated by a Pydantic model."""
 
    def __init__(self, selectors: Dict[str, Selector], model: Type[BaseModel]) -> None:
      self.selectors = selectors
