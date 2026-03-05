@@ -1,4 +1,3 @@
- """HTML extraction using CSS selectors validated by Pydantic."""
  from __future__ import annotations
 
  from dataclasses import dataclass
