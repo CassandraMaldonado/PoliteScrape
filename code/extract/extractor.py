@@ -15,7 +15,6 @@
 
 
  def build_model(name: str, schema_def: Mapping[str, str]) -> Type[BaseModel]:
-   """Create a pydantic model from field -> type string mapping."""
    type_map = {
      "str": (str, ...),
      "int": (int, ...),
