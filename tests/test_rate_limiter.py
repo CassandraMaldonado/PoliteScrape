@@ -25,6 +25,6 @@
    second = await do_request()
    elapsed_between = second - first
 
-   # Allow small scheduling wiggle room
+
    assert elapsed_between >= 0.45
    assert (time.perf_counter() - t0) >= 0.9
