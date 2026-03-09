@@ -6,9 +6,8 @@
 
  import structlog
 
-
+# Configure structlog with the JSON output.
  def configure_logging(level: str = "INFO") -> None:
-   """Configure structlog with JSON output."""
    logging.basicConfig(
      level=getattr(logging, level.upper(), logging.INFO),
      format="%(message)s",
