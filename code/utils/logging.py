@@ -27,6 +27,6 @@
      logger_factory=structlog.PrintLoggerFactory(),
    )
 
-# Returna a structlog logger.
+# Returns a structlog logger.
  def get_logger(**kwargs: Any) -> structlog.stdlib.BoundLogger:
    return structlog.get_logger().bind(**kwargs)
