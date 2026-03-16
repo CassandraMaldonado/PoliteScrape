@@ -6,7 +6,6 @@
  def utc_now() -> datetime:
    return datetime.now(timezone.utc)
 
-
+# Returns ISO formatted UTC timestamp.
  def iso_now() -> str:
-   """Return ISO formatted UTC timestamp."""
    return utc_now().isoformat()
