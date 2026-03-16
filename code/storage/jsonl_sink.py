@@ -1,4 +1,3 @@
- """Append-only JSONL sink."""
  from __future__ import annotations
 
  import json
