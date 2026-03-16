@@ -4,9 +4,8 @@
  from pathlib import Path
  from typing import Any, Dict
 
-
+# Appends the objects as JSON.
  class JsonlSink:
-   """Append objects as JSON lines."""
 
    def __init__(self, path: str) -> None:
      self.path = Path(path)
