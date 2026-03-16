@@ -2,7 +2,7 @@
 
  from datetime import datetime, timezone
 
-   """Return an aware UTC datetime."""
+# Returns the date and time with UTC format.
  def utc_now() -> datetime:
    return datetime.now(timezone.utc)
 
