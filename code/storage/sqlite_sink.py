@@ -4,7 +4,7 @@
  from pathlib import Path
  from typing import Optional
 
-# Fetch metadata and completion checkpoints.
+# Fetches metadata and checkpoints.
  class MetadataStore:
 
    def __init__(self, db_path: str) -> None:
