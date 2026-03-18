@@ -4,9 +4,8 @@
  from pathlib import Path
  from typing import Optional
 
-
+# Fetch metadata and completion checkpoints.
  class MetadataStore:
-   """Persist fetch metadata and completion checkpoints."""
 
    def __init__(self, db_path: str) -> None:
      self.db_path = Path(db_path)
