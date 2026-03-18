@@ -1,4 +1,4 @@
- """Crawl engine orchestrating fetch, robots, rate limiting, extraction, and sinks."""
+# Crawl engine orchestrating fetch, robots, rate limiting, extraction, and sinks.
  from __future__ import annotations
 
  import asyncio
