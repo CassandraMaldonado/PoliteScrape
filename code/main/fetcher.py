@@ -28,7 +28,7 @@
    sha256: str
    fetched_at: str
 
-
+# Simple disk cache keyed by URL.
  class DiskCache:
 
    def __init__(self, cache_dir: Optional[str]) -> None:
@@ -78,7 +78,6 @@
 
 
  class AsyncFetcher:
-   """HTTP client with retry/backoff and caching."""
 
    def __init__(
      self,
