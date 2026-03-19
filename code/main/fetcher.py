@@ -30,7 +30,6 @@
 
 
  class DiskCache:
-   """Simple URL-keyed disk cache."""
 
    def __init__(self, cache_dir: Optional[str]) -> None:
      self.cache_dir = Path(cache_dir) if cache_dir else None
