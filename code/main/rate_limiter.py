@@ -8,7 +8,7 @@
  from typing import Dict, Optional
  from urllib.parse import urlparse
 
-
+# Using a simple bucket approach and small random delays to avoid request spikes.
  class RateLimiter:
    """Coarse token/leaky bucket rate limiter with jitter."""
 
