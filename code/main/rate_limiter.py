@@ -1,4 +1,4 @@
- """Async rate limiter with per-domain and global controls."""
+# Async rate limiter with domain and global controls.
  from __future__ import annotations
 
  import asyncio
