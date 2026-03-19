@@ -1,4 +1,4 @@
-# Async HTTP fetcher with retries.
+# Async HTTP fetching with retries and backoff.
  from __future__ import annotations
 
  import base64
