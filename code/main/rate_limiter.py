@@ -10,7 +10,6 @@
 
 # Using a simple bucket approach and small random delays to avoid request spikes.
  class RateLimiter:
-   """Coarse token/leaky bucket rate limiter with jitter."""
 
    def __init__(
      self,
