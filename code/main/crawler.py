@@ -24,9 +24,8 @@
    failed: int = 0
    skipped: int = 0
 
-
+# Orchestrator.
  class Crawler:
-   """High-level orchestrator for polite scraping."""
 
    def __init__(self, config: RunConfig) -> None:
      self.config = config
