@@ -1,4 +1,4 @@
- """Async HTTP fetcher with retries and optional disk cache."""
+# Async HTTP fetcher with retries.
  from __future__ import annotations
 
  import base64
