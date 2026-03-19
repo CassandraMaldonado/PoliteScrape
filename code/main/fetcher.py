@@ -76,7 +76,7 @@
      except Exception as exc:  # noqa: BLE001
        logger.warning("cache_write_failed", path=str(path), error=str(exc))
 
-
+# HTTP client with retry/backoff and caching to avoid refetching.
  class AsyncFetcher:
 
    def __init__(
