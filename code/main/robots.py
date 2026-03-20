@@ -1,4 +1,4 @@
- """Robots.txt retrieval and evaluation."""
+# Retrieval and eval.
  from __future__ import annotations
 
  import asyncio
