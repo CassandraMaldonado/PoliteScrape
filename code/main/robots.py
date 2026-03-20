@@ -12,9 +12,8 @@
 
  logger = get_logger(component="robots")
 
-
+# Fetch and cache robots.txt per domain."""
  class RobotsCache:
-   """Fetch and cache robots.txt per domain."""
 
    def __init__(self, user_agent: str, timeout: float = 5.0) -> None:
      self.user_agent = user_agent
