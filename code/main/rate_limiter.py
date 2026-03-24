@@ -49,7 +49,7 @@
      if wait + jitter > 0:
        await asyncio.sleep(wait + jitter)
 
-#     """Async context to guard a request."""
+# Async context to guard a request.
    @asynccontextmanager
    async def limit(self, url: str):
      domain = self._domain(url)
