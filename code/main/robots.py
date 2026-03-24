@@ -62,8 +62,8 @@
      parser = await self._get_parser(url)
      return parser.can_fetch(self.user_agent, url)
 
+  #      """Return crawl-delay if provided by robots.txt."""
    async def crawl_delay(self, url: str) -> Optional[float]:
-     """Return crawl-delay if provided by robots.txt."""
      parser = await self._get_parser(url)
      delay = parser.crawl_delay(self.user_agent)
      return float(delay) if delay is not None else None
