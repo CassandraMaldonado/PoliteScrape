@@ -62,8 +62,8 @@
    async def is_allowed(self, url: str) -> bool:
      parser = await self._get_parser(url)
      return parser.can_fetch(self.user_agent, url)
-
-  #      """Return crawl-delay if provided by robots.txt."""
+    
+# Return crawl delay if provided by robots.txt
    async def crawl_delay(self, url: str) -> Optional[float]:
      parser = await self._get_parser(url)
      delay = parser.crawl_delay(self.user_agent)
