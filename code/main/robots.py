@@ -58,7 +58,7 @@
        return parser
 
     
-"""Return whether URL is allowed for configured user agent."""
+# Return whether URL is allowed for configured user agent.
    async def is_allowed(self, url: str) -> bool:
      parser = await self._get_parser(url)
      return parser.can_fetch(self.user_agent, url)
